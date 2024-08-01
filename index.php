@@ -1,3 +1,9 @@
+<?php
+  $json = file_get_contents("data.json");
+  $data = json_decode($json,true);
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,11 +20,17 @@
 <body class="bg-dark">
   <div class="container">
     <div class="mt-4 mb-5 d-flex justify-content-between align-items-center">
-      <h1 class="text-white">Get your Pokemon!</h1>
+      <h1 class="text-white">Get your Pokemon!<i class="fa fa-gamepad" aria-hidden="true"></i></h1>
+      <div>
+      <p style="color: rgb(135,206,235); font-size:15px">Who is that pokemon?</p>
+            <i class="fa fa-cog fa-spin fa-3x fa-fw" ><img src="pokemon.jpg" width="200" height="160"></i>       
+</div>
       <div>
         <button class="btn btn-primary">
           <i class="fa fa-sign-in"></i> Login</button>
+          
       </div>
+      
     </div>
     <table class="table table-dark">
       <thead>
@@ -35,10 +47,28 @@
       <tbody>
 
         <!-- Write your code here -->
+        
+          <?php foreach($data as $element):?>
+            <tr>
+            <td><img src ="<?php echo $element["image"]["thumbnail"];?>"></td>
+            <td><span><?php echo $element["name"]["english"];?></span></td>
+            <td><span style="text-transform:uppercase"><?php echo $element["species"];?></span></td>
+            <td><?php echo $element["description"];?></td>
+            <td><?php echo $element["profile"]["weight"];?></td>
+            <td><?php echo $element["profile"]["height"];?></td>
+            <td><button>
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
+            </tr>
+          <?php endforeach;?>
+       
       </tbody>
     </table>
 
   </div>
+            
+
+
   <!-- DNT MAKE ANY CHANGES ON THE CODE BELOW -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
