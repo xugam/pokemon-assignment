@@ -23,13 +23,25 @@
       <h1 class="text-white">Get your Pokemon!<i class="fa fa-gamepad" aria-hidden="true"></i></h1>
       <div>
       <p style="color: rgb(135,206,235); font-size:15px">Who is that pokemon?</p>
-            <i class="fa fa-cog fa-spin fa-3x fa-fw" ><img src="pokemon.jpg" width="200" height="160"></i>       
+            <i class="fa fa-cog fa-spin fa-3x fa-fw" ><img src="pokemon.jpg" width="100" height="70"></i>       
 </div>
+<div>
+        <button class="btn btn-danger">
+          <i class="fa fa-fire" aria-hidden="true"></i>
+        </button>
+        <button class = "btn btn-success">
+          <i class="fa fa-leaf" aria-hidden="true"></i>
+        </button>
+        <button class = "btn btn-info">
+          <i class="fa fa-tint" aria-hidden="true"></i>
+        </button>
+      
+      </div>
       <div>
         <button class="btn btn-primary">
           <i class="fa fa-sign-in"></i> Login</button>
-          
       </div>
+      
       
     </div>
     <table class="table table-dark">
@@ -56,8 +68,8 @@
             <td><?php echo $element["description"];?></td>
             <td><?php echo $element["profile"]["weight"];?></td>
             <td><?php echo $element["profile"]["height"];?></td>
-            <td><button>
-              <i class="fa fa-plus" aria-hidden="true">Collect</i>
+            <td><button class="btn btn-secondary">
+              <i class="fa fa-plus" aria-hidden="true"> Collect</i>
               </button>
             </tr>
           <?php endforeach;?>
