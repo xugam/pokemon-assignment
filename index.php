@@ -26,19 +26,19 @@
             <i class="fa fa-cog fa-spin fa-3x fa-fw" ><img src="pokemon.jpg" width="100" height="70"></i>       
 </div>
 <div>
-        <button class="btn btn-danger">
+        <button class="btn btn-danger btn-lg">
           <i class="fa fa-fire" aria-hidden="true"></i>
         </button>
-        <button class = "btn btn-success">
+        <button class = "btn btn-success btn-lg">
           <i class="fa fa-leaf" aria-hidden="true"></i>
         </button>
-        <button class = "btn btn-info">
+        <button class = "btn btn-info  btn-lg">
           <i class="fa fa-tint" aria-hidden="true"></i>
         </button>
       
       </div>
       <div>
-        <button class="btn btn-primary">
+        <button class="btn btn-primary btn-lg">
           <i class="fa fa-sign-in"></i> Login</button>
       </div>
       
@@ -68,8 +68,8 @@
             <td><?php echo $element["description"];?></td>
             <td><?php echo $element["profile"]["weight"];?></td>
             <td><?php echo $element["profile"]["height"];?></td>
-            <td><button class="btn btn-secondary">
-              <i class="fa fa-plus" aria-hidden="true"> Collect</i>
+            <td><button class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">
+              <i class="fa fa-plus" aria-hidden="true"> </i>Collect
               </button>
             </tr>
           <?php endforeach;?>
