@@ -57,7 +57,7 @@
             <td><?php echo $element["profile"]["weight"];?></td>
             <td><?php echo $element["profile"]["height"];?></td>
             <td><button>
-              <i class="fa fa-plus" aria-hidden="true"></i>
+              <i class="fa fa-plus" aria-hidden="true">Collect</i>
               </button>
             </tr>
           <?php endforeach;?>
